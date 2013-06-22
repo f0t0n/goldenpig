@@ -1,7 +1,7 @@
 {
 	"author": "Eugene Naydenov",
 	"name": "GoldenPig",
-	"description": "Simple Chat",
+	"description": "A simple chat application that uses Pusher service for messaging.",
 	"version": "0.0.1",
 	"homepage": "https://github.com/f0t0n/goldenpig",
 	"repository": {

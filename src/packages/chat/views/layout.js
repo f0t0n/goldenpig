@@ -10,20 +10,20 @@ define(function(require, exports, module) {
 	MessageCollection = require('../collections/message_collection');
 	
 	return Backbone.Marionette.Layout.extend({
-		 template: _.template(LayoutTpl),
-		 regions: {
+		template: _.template(LayoutTpl),
+		regions: {
 			chatLog: '#chat-log',
 			chatForm: '#chat-form'
-		 },
-		 regionViews: {
+		},
+		regionViews: {
 			chatLog: ChatLogView,
 			chatForm: ChatFormView
-		 },
-		 onRender: function() {
+		},
+		onRender: function() {
 			_.each(this.regions, this._showRegion, this);
-		 },
-		 _showRegion: function(selector, name) {
-		 	var region,
+		},
+		_showRegion: function(selector, name) {
+			var region,
 				view;
 			region = this[name];
 			viewOptions = {
@@ -34,6 +34,6 @@ define(function(require, exports, module) {
 			}
 			view = new this.regionViews[name](viewOptions);
 			region.show(view);
-		 }
+		}
 	});
 });
